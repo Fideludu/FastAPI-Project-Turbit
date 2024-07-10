@@ -1,0 +1,41 @@
+[flake8]
+max-line-length = 88
+
+per-file-ignores =
+  ; all tests
+  test_*.py,tests.py,tests_*.py,*/tests/*,conftest.py:
+  ; Use of assert detected
+  S101,
+  ; Found outer scope names shadowing
+  WPS442,
+  ; Found too many local variables
+  WPS210,
+  ; Found magic number
+  WPS432,
+  ; Missing parameter(s) in Docstring
+  DAR101,
+  ; Found too many arguments
+  WPS211,
+
+  ; all init files
+  __init__.py:
+  ; ignore not used imports
+  F401,
+  ; ignore import with wildcard
+  F403,
+  ; Found wrong metadata variable
+  WPS410,
+
+exclude =
+    .git,
+    __pycache__,
+    env,
+    venv,
+    .venv,
+    .eggs,
+    *.egg,
+    build,
+    dist
+ignore =
+    E203,
+    W503

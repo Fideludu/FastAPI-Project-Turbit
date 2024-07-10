@@ -1,0 +1,120 @@
+[MASTER]
+# Specify a configuration file. Leave blank to disable external configuration.
+rcfile=
+
+# Add files or directories to the blacklist. They should be base names, not paths.
+ignore=CVS
+
+# Add files or directories matching the regex patterns to the blacklist. The regex matches against base names, not paths.
+ignore-patterns=^.*__pycache__$
+
+# Pickle collected data for later comparisons.
+persistent=yes
+
+# Allow loading of arbitrary C extensions.
+extension-pkg-whitelist=
+
+# A comma-separated list of package or module names from where C extensions may be loaded.
+#extension-pkg-allow-list=
+
+# List of plugins (as comma separated values of python modules names) to load.
+load-plugins=
+
+[REPORTS]
+# Set the output format. Available formats are text, parseable, colorized, json and msvs.
+output-format=colorized
+
+# Put messages in a separate file for each module / package specified on the command line instead of printing them on stdout.
+; files-output=no
+
+# Set the output directory.
+; output-dir=./pylint-reports
+;
+[FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=88
+
+# String used as indentation unit.
+indent-string='    '
+
+# Maximum number of lines in a module.
+max-module-lines=1000
+
+# Maximum number of arguments for function / method.
+max-args=5
+
+# Maximum number of locals for function / method body.
+max-locals=15
+
+# Maximum number of return / yield for function / method body.
+max-returns=6
+
+# Maximum number of branch for function / method body.
+max-branches=12
+
+# Maximum number of statements in function / method body.
+max-statements=50
+
+# Maximum number of parents for a class.
+max-parents=7
+
+# Maximum number of attributes for a class.
+max-attributes=7
+
+# Minimum number of public methods for a class.
+min-public-methods=2
+
+# Maximum number of public methods for a class.
+max-public-methods=20
+
+[MESSAGES CONTROL]
+# Disable the message, report, category or checker with the given id(s).
+disable=C0114,C0116
+
+[REFACTORING]
+# Maximum number of nested blocks for function / method body.
+max-nested-blocks=5
+
+[DESIGN]
+# Maximum number of arguments for function / method.
+max-args=5
+
+# Maximum number of locals for function / method body.
+max-locals=15
+
+# Maximum number of return / yield for function / method body.
+max-returns=6
+
+# Maximum number of branch for function / method body.
+max-branches=12
+
+# Maximum number of statements in function / method body.
+max-statements=50
+
+[LOGGING]
+# Logging modules to check that the string format arguments are in logging function parameter format.
+logging-modules=logging
+
+[SIMILARITIES]
+# Minimum lines number of a similarity.
+min-similarity-lines=4
+
+# Ignore comments when computing similarities.
+ignore-comments=yes
+
+# Ignore docstrings when computing similarities.
+ignore-docstrings=yes
+
+# Ignore imports when computing similarities.
+ignore-imports=yes
+
+[VARIABLES]
+# List of variable names that are allowed to be constants.
+const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$
+
+[TYPECHECK]
+# Tells whether to warn about missing members when the owner class is inferred.
+# ignore-missing-imports=yes
+
+# Disable import errors warning
+disable=import-error
