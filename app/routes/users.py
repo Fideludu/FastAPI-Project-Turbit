@@ -5,7 +5,7 @@ from app.services.user_service import add_user, modify_user, delete_user
 router = APIRouter()
 
 
-@router.post("/")
+@router.post("/users")
 async def create_user(user: User):
     add_user(user)
     return {"message": "User added successfully"}
